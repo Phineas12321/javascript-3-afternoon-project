@@ -137,7 +137,7 @@ let secrets = (obj) => {
 
 //Code Here
 let removePassword = (obj) => {
-  delete obj[password]
+  delete obj['password']
   return obj
 }
 
@@ -159,8 +159,8 @@ var deleteTheBigNumbers = {
 
 //Code Here
 for(let key in deleteTheBigNumbers){
-  if(obj[key] > 100){
-    delete obj[key]
+  if(deleteTheBigNumbers[key] > 100){
+    delete deleteTheBigNumbers[key]
   }
 }
 
@@ -177,10 +177,11 @@ for(let key in deleteTheBigNumbers){
 //Code Here
 let startsWithK = (obj) => {
   for(let key in obj){
-    if(obj[key][0] === 'k'){
+    if(obj[key] === 'k'){
       delete obj[key]
     }
   }
+
   return obj
 }
 
