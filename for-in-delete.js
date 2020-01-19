@@ -100,7 +100,7 @@ let double = (obj) => {
 let secrets = (obj) => {
   let str = ''
   for(let key in obj) {
-    if(obj[key][0] === 's' && obj[key][1] === 'h'){
+    if(key.charAt(0) === 's' && key.charAt(1) === 'h'){
       str += obj[key]
     }
   }
@@ -177,7 +177,7 @@ for(let key in deleteTheBigNumbers){
 //Code Here
 let startsWithK = (obj) => {
   for(let key in obj){
-    if(obj[key] === 'k'){
+    if(key.charAt(0) === 'k'){
       delete obj[key]
     }
   }
@@ -200,7 +200,10 @@ let startsWithK = (obj) => {
 //Code Here
 let hiddenTreasure = (obj) => {
   for(let key in obj){
-    
+    if(!obj[key].includes('treasure')){
+      delete obj[key]
+    }
   }
+  return obj
 }
 
