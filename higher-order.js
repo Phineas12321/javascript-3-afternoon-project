@@ -139,13 +139,12 @@ const purchases = [{"owner":"Barry","price":103},{"owner":"Bob","price":75},
 /*
   Use a high order method to create to get the sum of bobsTotal.
 */
-
+let count = 0
 let bobsTotal = purchases.reduce((acc, e, i, arr) => {
+  
   if(arr[i].owner === 'Bob'){
-    console.log(acc += e.price)
-    return acc += e.price
-  }else{
-    return acc
+    
+    return count += e.price
   }
 }, 0)
 
